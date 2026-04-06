@@ -1,7 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
-import { sendTelegramAlert } from '@/lib/notifications'
+import { sendTelegramAlert, sendEmailAlert } from '@/lib/notifications'
 
 export async function savePartialLead(restaurantName: string): Promise<{ success: boolean; leadId?: string; error?: string }> {
   try {
@@ -64,8 +64,9 @@ export async function completeLeadCapture(leadId: string | null | undefined, res
        if (updateError) throw updateError
     }
 
-    // Fire Telegram Alert (asynchronous, do not await to avoid blocking)
+    // Fire alerts (asynchronous, do not await to avoid blocking)
     sendTelegramAlert(`🚀 <b>Nuevo Prospecto B2B Capturado (RestoOs Landing)</b>\n\n🍽️ Restaurante: ${restaurantName}\n✉️ Email: ${payload.email}\n📞 Teléfono: ${payload.phone || 'No provisto'}`)
+    sendEmailAlert({ restaurantName, email: payload.email, phone: payload.phone })
 
     return { success: true }
   } catch (err: any) {
