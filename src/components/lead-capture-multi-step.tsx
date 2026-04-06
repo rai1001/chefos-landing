@@ -52,7 +52,7 @@ export function LeadCaptureMultiStep() {
       >
         <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-white mb-2">¡Solicitud recibida!</h3>
-        <p className="text-gray-400">Hemos enviado información para activar y probar a CLARA en tu correo electrónico. Te contactaremos pronto.</p>
+        <p className="text-gray-400">Hemos enviado acceso e información sobre RestoOs a tu correo electrónico. Te contactaremos pronto.</p>
       </motion.div>
     );
   }
@@ -70,8 +70,8 @@ export function LeadCaptureMultiStep() {
             className="flex flex-col gap-6"
           >
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Prueba CLARA gratis</h3>
-              <p className="text-gray-400 text-sm">Descubre cómo la IA atiende las reservas por ti.</p>
+              <h3 className="text-2xl font-bold text-white">Prueba RestoOs</h3>
+              <p className="text-gray-400 text-sm">Descubre cómo la tecnología transformará y escalará tus operaciones.</p>
             </div>
             
             <div className="space-y-4">

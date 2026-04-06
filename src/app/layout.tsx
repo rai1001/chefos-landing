@@ -78,7 +78,7 @@ export default function RootLayout({
         />
         
       </head>
-      <body className="h-full bg-[#050505] selection:bg-[#FF7A00] selection:text-white">
+      <body className="h-full bg-[#0A0A0A] selection:bg-resto-peach selection:text-black">
         <BackgroundPaperShaders 
           className="fixed inset-0 w-full h-full -z-10 pointer-events-none"
           color="rgba(128, 128, 128, 0.3)" 

@@ -6,14 +6,24 @@ import { motion } from 'framer-motion';
 interface VideoDemoCardProps {
   title: string;
   description: string;
-  videoUrl?: string; // e.g., YouTube embed URL
+  videoUrl?: string; // Para YouTube embeds etc
+  videoSrc?: string; // Para MP4 locales
 }
 
-export function VideoDemoCard({ title, description, videoUrl }: VideoDemoCardProps) {
+export function VideoDemoCard({ title, description, videoUrl, videoSrc }: VideoDemoCardProps) {
   return (
     <div className="flex flex-col h-full bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm transition-all hover:bg-white/10">
       <div className="relative aspect-video bg-black/40 flex items-center justify-center overflow-hidden">
-        {videoUrl ? (
+        {videoSrc ? (
+          <video 
+            src={videoSrc}
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-80"
+          />
+        ) : videoUrl ? (
           <iframe 
             src={videoUrl} 
             title={title}
@@ -25,14 +35,14 @@ export function VideoDemoCard({ title, description, videoUrl }: VideoDemoCardPro
         ) : (
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="flex flex-col items-center justify-center text-gray-500 gap-3 cursor-not-allowed cursor-wait"
+            className="flex flex-col items-center justify-center text-gray-500 gap-3 cursor-not-allowed"
           >
-            <PlayCircle className="w-16 h-16 opacity-50" />
-            <p className="text-sm font-medium uppercase tracking-widest text-blue-400/80">Video en Producción</p>
+            <PlayCircle className="w-16 h-16 opacity-30" />
+            <p className="text-sm font-medium uppercase tracking-widest text-resto-peach/70">Video en Producción (Veo AI)</p>
           </motion.div>
         )}
       </div>
-      <div className="p-6">
+      <div className="p-6 relative z-10 bg-gradient-to-t from-black/80 to-transparent">
         <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
         <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
       </div>

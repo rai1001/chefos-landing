@@ -50,6 +50,8 @@
   --font-geist-mono: var(----font-geist-mono);
   --font-geist-sans: var(----font-geist-sans);
   --radius: var(----radius);
+  --color-resto-peach: #D2A881;
+  --font-serif: "Playfair Display", "Georgia", "Times New Roman", serif;
 }
 
 :root {
@@ -91,11 +93,11 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.125 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.18 0 0);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.18 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
