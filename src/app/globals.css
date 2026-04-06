@@ -138,3 +138,123 @@
     @apply font-sans;
   }
 }
+
+/* Blog prose (MDX content) */
+.prose-blog {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.prose-blog h2 {
+  font-family: var(--font-heading), serif;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prose-blog h3 {
+  font-family: var(--font-heading), serif;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.prose-blog p {
+  margin-bottom: 1.25em;
+}
+
+.prose-blog a {
+  color: #D2A881;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.prose-blog a:hover {
+  opacity: 0.8;
+}
+
+.prose-blog strong {
+  color: white;
+  font-weight: 600;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose-blog li {
+  margin-bottom: 0.5em;
+}
+
+.prose-blog li::marker {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.prose-blog blockquote {
+  border-left: 3px solid #D2A881;
+  padding-left: 1em;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 1.5em 0;
+}
+
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 1.5em 0;
+}
+
+.prose-blog th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.prose-blog td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.prose-blog code:not(pre code) {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: white;
+}
+
+.prose-blog pre {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.prose-blog hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 2em 0;
+}
+
+.prose-blog img {
+  border-radius: 12px;
+  margin: 1.5em 0;
+}
