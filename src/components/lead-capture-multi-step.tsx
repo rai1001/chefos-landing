@@ -52,7 +52,7 @@ export function LeadCaptureMultiStep() {
       >
         <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-white mb-2">¡Solicitud recibida!</h3>
-        <p className="text-gray-400">Hemos enviado acceso e información sobre RestoOs a tu correo electrónico. Te contactaremos pronto.</p>
+        <p className="text-gray-400">Te enviaremos información detallada sobre RestoOs a tu correo electrónico en las próximas horas. ¡Gracias por tu interés!</p>
       </motion.div>
     );
   }
